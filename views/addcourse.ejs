@@ -41,5 +41,24 @@
             </ul>
         </nav>
     </header>
+
+    <form method="post" action="/">
+        <% if (error != "") { %>
+            <p class="error"><%= error %></p>
+        <% } %>
+        <label for="name">Coursename:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="code">Coursecode:</label>
+        <input type="text" id="code" name="code">
+        <br>
+        <label for="syll">Syllabus:</label>
+        <input type="text" id="syll" name="syll">
+        <br>
+        <label for="prog">Progression:</label>
+        <input type="text" id="prog" name="prog">
+        <br>
+        <input type="submit" value="Bekräfta">
+    </form>
 </body>
 </html>

@@ -41,5 +41,30 @@
             </ul>
         </nav>
     </header>
+
+    <div class="container">
+        <article>
+            <h1>Kurser:</h1>
+            <% if(locals.rows.length > 0) { %>
+                <% locals.rows.forEach(row => { %>
+                    <p>
+                    Kursnamn:   <%= row.Coursename %>
+                    </p>
+                    <p>
+                    Kurskord:    <%= row.Coursecode %>
+                    </p>
+                    <p>
+                    Syllabus:    <%= row.Syllabus %>
+                    </p>
+                    <p>
+                    Progression:    <%= row.Progression %>
+                    </p>
+                    <p>
+                        <a href="/delete/<%= row.id %>">Radera kurs></a>
+                    </p>
+                <%}); %>
+            <%} %>
+        </article>
+    </div>
 </body>
 </html>
